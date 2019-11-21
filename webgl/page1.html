@@ -1,0 +1,38 @@
+<!--
+ * @Description: 
+ * @Author: jiangronghua
+ * @Date: 2019-11-21 13:55:37
+ * @LastEditors: jiangronghua
+ * @LastEditTime: 2019-11-21 15:01:02
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>webgl基本原理</title>
+</head>
+<body onload="main()">
+  <h2>webgl基本原理</h2>
+  <canvas id="glcanvas" width="640" height="480">
+      Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
+  </canvas>
+</body>
+<script type="text/javascript">
+  /**
+   * @description: 
+   * @author: jiangronghua
+   */
+  function main () {
+    const canvas = document.querySelector("#glcanvas")
+    const gl = canvas.getContext("webgl")
+    if (!gl) {
+      alert("Unable to initialize WebGL. Your browser or machine may not support it.")
+      return;
+    }
+    gl.clearColor(0.0, 0.0, 0.0, 1.0)
+    gl.clear(gl.COLOR_BUFFER_BIT);
+  }
+</script>
+</html>
